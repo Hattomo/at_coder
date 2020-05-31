@@ -1,0 +1,8 @@
+# No extension files
+*
+!*/
+!*.*
+
+# Executable file
+a.out
+a.exe
