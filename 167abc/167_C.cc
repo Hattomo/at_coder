@@ -34,18 +34,8 @@ int main()
         for (int j = 0; j < M + 1; j++)
         {
             cin >> tmp[j];
-            //cout << "```" << tmp[j]<<endl;
-            //cout << "**"<<tmp[0] << tmp[1] << tmp[2] << tmp[3] <<endl;
         }
         array[i] = tmp;
-        //cout << "@"<<array[i][0] << array[i][1] << array[i][2] << array[i][3] << endl;
-    }
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M + 1; j++)
-        {
-            //cout << array[i][j] << endl;
-        }
     }
 
     int *level = new int[M];
