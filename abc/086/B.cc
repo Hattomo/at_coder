@@ -12,29 +12,24 @@ using namespace std;
 
 #define PI 3.14159265358979323846264338327950L
 
+string res = "No";
+
 int main()
 {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    long long n;
-    cin >> n;
-    int ans = 0;
-    for (long long i = 2; i * i <= n; i++)
+    string a, b;
+    cin >> a >> b;
+    int number = stoi(a + b);
+    for (int i = 1; i < 1000; i++)
     {
-        long long z = i;
-        while (n % z == 0)
+        if (number == i * i)
         {
-            n /= z;
-            ans++;
-            z *= i;
-        }
-        while (n % i == 0)
-        {
-            n /= i;
+            res = "Yes";
         }
     }
-    if (n > 1)
-        ans++;
-    cout << ans << endl;
+
+    cout << res << endl;
+    return 0;
 }

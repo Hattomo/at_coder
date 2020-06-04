@@ -19,16 +19,16 @@ int main()
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    int A, B;
-    int socket = 1;
-    cin >> A >> B;
-    int cnt = 0;
-    while (socket < B)
+    long long int N, K;
+    cin >> N >> K;
+
+    if (N % K < K - N % K)
     {
-        socket += A - 1;
-        cnt++;
-        //cout << socket << endl;
+        cout << N % K << endl;
     }
-    cout << cnt << endl;
+    else
+    {
+        cout << K - N % K << endl;
+    }
     return 0;
 }

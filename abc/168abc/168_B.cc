@@ -16,7 +16,7 @@ int main()
     }
     else
     {
-        cout << S.substr(0,K)+"..." << endl;
+        cout << S.substr(0, K) + "..." << endl;
     }
     return 0;
 }

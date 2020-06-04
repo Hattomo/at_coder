@@ -27,8 +27,8 @@ int main()
     }
     deque<int> q;
     q.push_back(0); // init queue with 0
-    int ans[N]{}; // anser
-    bool vis[N]{}; // see or not
+    int ans[N]{};   // anser
+    bool vis[N]{};  // see or not
     vis[0] = true;
     while (!q.empty())
     {

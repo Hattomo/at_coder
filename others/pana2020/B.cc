@@ -12,23 +12,27 @@ using namespace std;
 
 #define PI 3.14159265358979323846264338327950L
 
-int res;
+long long int res;
 
 int main()
 {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    int A, B;
-    int socket = 1;
-    cin >> A >> B;
-    int cnt = 0;
-    while (socket < B)
+    long long int H, W;
+    cin >> H >> W;
+    if (H == 1 || W == 1)
     {
-        socket += A - 1;
-        cnt++;
-        //cout << socket << endl;
+        res = 1;
     }
-    cout << cnt << endl;
+    else if (H % 2 == 0 || W % 2 == 0)
+    {
+        res = H * W / 2;
+    }
+    else
+    {
+        res = H * W / 2 + 1;
+    }
+    cout << res << endl;
     return 0;
 }

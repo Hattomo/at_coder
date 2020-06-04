@@ -19,16 +19,15 @@ int main()
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    int A, B;
-    int socket = 1;
-    cin >> A >> B;
-    int cnt = 0;
-    while (socket < B)
+    int N;
+    cin >> N;
+    int d[100000];
+    for (int i = 0; i < N; i++)
     {
-        socket += A - 1;
-        cnt++;
-        //cout << socket << endl;
+        cin >> d[i];
     }
-    cout << cnt << endl;
+    sort(d, d + N);
+    res = d[N / 2] - d[N / 2 - 1];
+    cout << res << endl;
     return 0;
 }
