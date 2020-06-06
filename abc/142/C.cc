@@ -22,16 +22,16 @@ int main()
     int N;
     cin >> N;
     int A[100000];
-    for(int i = 0; i < N; i++ )
+    for (int i = 0; i < N; i++)
     {
         cin >> A[i];
     }
     int rev[100000];
-    for(int i = 0; i < N; i++ )
+    for (int i = 0; i < N; i++)
     {
         rev[A[i] - 1] = i + 1;
     }
-    for(int i = 0; i < N; i++ )
+    for (int i = 0; i < N; i++)
     {
         cout << rev[i] << endl;
     }

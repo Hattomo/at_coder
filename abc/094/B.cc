@@ -19,10 +19,10 @@ int main()
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    int N,M,X;
+    int N, M, X;
     cin >> N >> M >> X;
     int A[110];
-    for(int i = 0; i < M; i++ )
+    for (int i = 0; i < M; i++)
     {
         cin >> A[i];
     }
@@ -30,9 +30,10 @@ int main()
     int pos = X;
     while (pos >= 0)
     {
-        for(int i = 0; i < M; i++ )
+        for (int i = 0; i < M; i++)
         {
-            if (A[i]==pos){
+            if (A[i] == pos)
+            {
                 cost++;
             }
         }
@@ -42,15 +43,17 @@ int main()
     pos = X;
     while (pos <= N)
     {
-        for(int i = 0; i < M; i++ )
+        for (int i = 0; i < M; i++)
         {
-            if(A[i]==pos){
+            if (A[i] == pos)
+            {
                 res++;
             }
         }
         pos++;
     }
-    if(cost<res){
+    if (cost < res)
+    {
         res = cost;
     }
     cout << res << endl;

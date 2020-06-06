@@ -27,7 +27,7 @@ int main()
         cin >> A[i];
     }
     res = 0;
-    for (int i = 0; i < N ; i++)
+    for (int i = 0; i < N; i++)
     {
         int tmp = 0;
         int cnt = 0;
