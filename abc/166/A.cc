@@ -13,28 +13,22 @@ typedef long long ll;
 
 #define PI 3.14159265358979323846264338327950L
 
-ll res;
+int res;
 
 int main()
 {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    ll N, K;
-    ll now, next;
-    cin >> N >> K;
-    vector<ll> A(N + 1);
-    for (int i = 0; i < N; i++)
+    string S;
+    cin >> S;
+    if (S == "ABC")
     {
-        cin >> A[i];
+        cout << "ARC" << endl;
     }
-    next = A[0];
-    now = 1;
-    for (int i = 0; i < K; i++)
+    else
     {
-        now = next;
-        next = A[next];
+        cout << "ABC" << endl;
     }
-    cout << now << endl;
     return 0;
 }

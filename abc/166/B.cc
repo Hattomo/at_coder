@@ -13,28 +13,34 @@ typedef long long ll;
 
 #define PI 3.14159265358979323846264338327950L
 
-ll res;
+int res = 0;
 
 int main()
 {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    ll N, K;
-    ll now, next;
+    int N, K;
     cin >> N >> K;
-    vector<ll> A(N + 1);
-    for (int i = 0; i < N; i++)
-    {
-        cin >> A[i];
-    }
-    next = A[0];
-    now = 1;
+    vector<int> sunuke(N, 0);
     for (int i = 0; i < K; i++)
     {
-        now = next;
-        next = A[next];
+        int D;
+        cin >> D;
+        for (int j = 0; j < D; j++)
+        {
+            int tmp;
+            cin >> tmp;
+            sunuke[tmp - 1]++;
+        }
     }
-    cout << now << endl;
+    for (int i = 0; i < N; i++)
+    {
+        if (sunuke[i] == 0)
+        {
+            res++;
+        }
+    }
+    cout << res << endl;
     return 0;
 }
