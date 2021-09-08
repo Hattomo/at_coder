@@ -6,3 +6,6 @@
 # Executable file
 a.out
 a.exe
+
+# codespace
+.venv
