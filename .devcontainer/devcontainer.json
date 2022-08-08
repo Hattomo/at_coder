@@ -1,0 +1,31 @@
+// https: //github.com/microsoft/vscode-remote-release/issues/6850
+
+{
+	"name": "go-python-rust-cpp",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"extensions": [
+		"rust-lang.rust-analyzer",
+		"golang.go",
+		"ms-vscode.cpptools",
+		"ms-python.vscode-pylance",
+		"ms-python.python"
+
+	],
+	"features": {
+		"rust": {
+			"version": "1.62"
+		},
+		// "python": {
+		// 	"version": "os-provided"
+		// "version": "3.10"
+
+		// },
+		"golang": {
+			"version": "1.19"
+		},
+		"github-cli": "latest"
+	},
+	"postStartCommand": "pip install -r .devcontainer/requirements.txt"
+}
