@@ -1,10 +1,9 @@
-From debian:bullseye
+# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/debian/.devcontainer/base.Dockerfile
 
-ENV LANG=C.UTF-8
-ENV TZ=Asia/Tokyo
+# [Choice] Debian version (use bullseye on local arm64/Apple Silicon): bullseye, buster
+ARG VARIANT="buster"
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 
-RUN DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get -y install --no-install-recommends ca-certificates openssl git curl sudo bash bash-completion less nano build-essential python3 python3-pip && \
-     rm -rf /var/lib/apt/lists/*
-
-WORKDIR /workspace
-CMD ["bash"]
+# ** [Optional] Uncomment this section to install additional packages. **
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends less nano curl sudo openssl && rm -rf /var/lib/apt/lists/*
