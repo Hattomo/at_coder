@@ -8,3 +8,6 @@ a.exe
 
 # codespace
 .venv
+
+# text
+*.txt
